@@ -1,0 +1,14 @@
+.button_holder{
+    min-width: 10.125em;
+    position: relative;
+    display: inline-block;
+    .button{
+        padding: 1em 1.5em;
+        background-color: rgb(var(--primary-rgb));
+        position: relative;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+    }
+}
