@@ -1,0 +1,35 @@
+.nav{
+    display: flex;   
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(var(--primary-color-rgb), 1);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85px;
+        height: 85px;
+    }
+    .menu{
+        ul{
+            display: flex;
+            gap: 20px;
+            li{
+                list-style: none;
+            }
+        }
+    }
+    .hamburger{
+        width: 85px;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
