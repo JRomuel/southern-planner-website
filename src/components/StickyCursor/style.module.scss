@@ -1,0 +1,9 @@
+.cursor{
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(var(--primary-rgb), 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100;
+}

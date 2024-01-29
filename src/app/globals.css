@@ -60,7 +60,8 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  height: 400vh;
   font-family: var(--font-roboto);
 }
 

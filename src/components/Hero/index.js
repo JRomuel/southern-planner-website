@@ -1,17 +1,43 @@
 import React from 'react'
+import styles from './hero.module.scss'
+import { useScroll, useTransform, motion, useMotionValueEvent } from 'framer-motion';
+import { useRef } from 'react';
+
 
 export default function Hero() {
-  return (
-    <div>
-        <div>
-            <section>
-                <div>
-                    <video class="img-cover" poster="" loop="true" autoplay="true" muted="" playsinline="">
-                        <source src="https://www.claudiacarrara.it/wp-content/uploads/2022/02/Hero_Cluadia_720.mp4" type="video/mp4"/>
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start start', 'end end']
+    })
+
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        console.log("Page scroll: ", latest)
+      })
+
+    const padding = useTransform(scrollYProgress, [0, 1], [0, 85]);
+
+    return (
+        <>
+             <div ref={container} className={styles.hero}>
+                <section className={styles.content}>
+                    <div className={styles.bg}>
+                    <video autoPlay playsInline muted loop>
+                        <source src="./videos/Hero_Cluadia_720.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
                     </video>
-                </div>
-            </section>
-        </div>
-    </div>
-  )
+                    </div>
+                    <div className={styles.text_content}>
+                        <h1>Southern Planners</h1>
+                    </div>
+                    <motion.div className={styles.mask} style={{borderWidth: padding}}></motion.div>
+                </section>
+            </div>
+            <div className={styles.test_content}>
+                <h1>New section</h1>
+            </div>
+        
+        </>
+   
+    )
 }

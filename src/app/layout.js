@@ -1,13 +1,17 @@
 'use client'
 
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Nav from "@/components/Nav"
 import Lenis from '@studio-freight/lenis'
 import Asides from "@/components/Asides"
+import StickyCursor from "@/components/StickyCursor"
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins =  Poppins({
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export default function RootLayout({ children }) {
 
@@ -25,7 +29,8 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
+        <StickyCursor/>
         <Nav/>
         <Asides/>
         {children}

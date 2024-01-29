@@ -1,10 +1,6 @@
 @import '/src/app/sass/mix';
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   @include mobile {    
     color: red;
   }
