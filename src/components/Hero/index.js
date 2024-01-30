@@ -11,9 +11,6 @@ export default function Hero() {
         offset: ['start start', 'end end']
     })
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        console.log("Page scroll: ", latest)
-      })
 
     const padding = useTransform(scrollYProgress, [0, 1], [0, 85]);
 

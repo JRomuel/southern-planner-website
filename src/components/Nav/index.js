@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './nav.module.scss'
 import Image from "next/image"
 import logo from "../../../public/southernplanner-logo-removebg-preview.png"
 import icon from "../../../public/southernplanner-icon-logo.png"
+import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion'
 
 export default function Nav() {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false)
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if(latest > previous && latest > 150){
+      setHidden(true);
+    }else{
+      setHidden(false);
+    }
+  })
+  
   return (
-    <div className={styles.wrapper}>
+    <motion.div
+      variants={{
+        visible: { backgroundColor: "#fff" },
+        hidden: { backgroundColor: "transparent" }
+      }}
+      animate={hidden?'hidden':'visible'}
+      transition={{ duration: 2 }}
+
+      className={styles.wrapper}>
       <div className={styles.icon}>
         <Image className={styles.icon_image} src={icon}/>
       </div>
@@ -28,6 +49,6 @@ export default function Nav() {
             <span></span>
           </a>
       </div>
-    </div>
+    </motion.div>
   )
 }
