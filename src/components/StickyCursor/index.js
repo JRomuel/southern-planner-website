@@ -1,7 +1,6 @@
-'use client';
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './style.module.scss';
-import { motion, useMotionValue, useSpring, transform, animate } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function StickyCursor() {
 
@@ -12,6 +11,7 @@ export default function StickyCursor() {
     x: useMotionValue(0),
     y: useMotionValue(0)
   }
+
   //Smooth out the mouse values
   const smoothOptions = {damping: 20, stiffness: 120, mass: 0.8}
   const smoothMouse = {
