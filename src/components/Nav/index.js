@@ -24,6 +24,7 @@ export default function Nav() {
         visible: { backgroundColor: "rgba(255, 255, 255, 1)" },
         hidden: { backgroundColor: "rgba(255, 255, 255, 0)" }
       }}
+      initial='visible'
       animate={hidden?'hidden':'visible'}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
       className={styles.wrapper}>
@@ -36,6 +37,7 @@ export default function Nav() {
           visible: { opacity: 1 },
           hidden: { opacity: 0 }
         }}
+        initial='visible'
         animate={hidden?'hidden':'visible'}
         transition={{ duration: 0.6, ease: 'easeInOut' }}
 

@@ -25,7 +25,8 @@ export default function Hero() {
                     </video>
                     </div>
                     <div className={styles.text_content}>
-                        <h1>Southern Planners</h1>
+                        <h1>Wedding Planner</h1>
+                        <p>LET’S PLAN YOUR BIG DAY, STRESS FREE!</p>
                     </div>
                     <motion.div className={styles.mask} style={{borderWidth: padding}}></motion.div>
                 </section>

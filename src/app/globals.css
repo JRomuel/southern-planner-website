@@ -10,11 +10,10 @@
   --font-vidaloka: 'Vidaloka', serif;
   --font-pt-serif: 'PT Serif', serif;
   --font-roboto: 'Roboto', sans-serif;
-  --foreground-rgb: 0,0,0;
+  --foreground-rgb: 68,68,68;
   --background-rgb: 250,248,247;
   --primary-rgb: 107,61,89;
 
-  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
@@ -72,4 +71,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.primary-color{
+  color: rgb(var(--primary-rgb));
 }
