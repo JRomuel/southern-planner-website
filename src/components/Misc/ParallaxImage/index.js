@@ -10,7 +10,7 @@ export default function ParallaxImage({src, container, alt, label}) {
       target: container,
       offset: ['start end', 'end start']
   })
-  const speed = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const speed = useTransform(scrollYProgress, [0, 1], [0, 320]);
 
   return (
     <div className={styles.parallax_image}>
