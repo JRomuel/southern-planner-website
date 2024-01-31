@@ -36,7 +36,6 @@ export default function RootLayout({ children }) {
         lenis.raf(time)
         requestAnimationFrame(raf)
       }
-      
       requestAnimationFrame(raf)
   }, [])
 
