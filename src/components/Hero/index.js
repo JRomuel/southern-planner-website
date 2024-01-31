@@ -16,8 +16,8 @@ export default function Hero() {
 
     return (
         <>
-             <div ref={container} className={styles.hero}>
-                <section className={styles.content}>
+             <section ref={container} className={styles.hero}>
+                <div className={styles.content}>
                     <div className={styles.bg}>
                     <video autoPlay playsInline muted loop>
                         <source src="./videos/Hero_Cluadia_720.mp4" type="video/mp4" />
@@ -25,15 +25,14 @@ export default function Hero() {
                     </video>
                     </div>
                     <div className={styles.text_content}>
-                        <h1>Wedding Planner</h1>
-                        <p>LET’S PLAN YOUR BIG DAY, STRESS FREE!</p>
+                        <div className="container">
+                            <h1>Wedding Planner</h1>
+                            <p>LET’S PLAN YOUR BIG DAY, STRESS FREE!</p>
+                        </div>
                     </div>
                     <motion.div className={styles.mask} style={{borderWidth: padding}}></motion.div>
-                </section>
-            </div>
-            <div className={styles.test_content}>
-                <h1>New section</h1>
-            </div>
+                </div>
+            </section>
         
         </>
    

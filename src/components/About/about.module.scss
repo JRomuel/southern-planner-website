@@ -1,0 +1,40 @@
+.content_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    .parallax_image{
+        position: relative;
+        max-width: 550px;
+        height: auto;
+        width: 50%;
+        flex-shrink: 0;
+        .figure{
+            position: relative;
+            padding-top: 150%;
+            overflow: hidden;
+            .image_wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                .image{
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+       
+        }
+     
+    }
+
+    .text_content{
+        .title{
+            transform: translateX(-130px);
+            width: calc(100% + 130px);
+        }
+    }
+
+}
