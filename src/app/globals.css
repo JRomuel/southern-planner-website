@@ -65,7 +65,7 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgba(var(--foreground-rgb),1);
 }
 
 a {
@@ -78,12 +78,13 @@ a {
 }
 
 .section{
-  padding: 120px 0;
+  padding: 40px 0;
 }
 
 .section-title{
   font-size: 60px;
   font-family: var(--breathings-font);
+  font-weight: 300;
 }
 
 .container{

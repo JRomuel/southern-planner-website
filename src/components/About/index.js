@@ -19,10 +19,6 @@ export default function About() {
           </div>
 
         </div>
-
-        <div style={{height: '100vh'}}>
-          
-        </div>
     </section>
   )
 }

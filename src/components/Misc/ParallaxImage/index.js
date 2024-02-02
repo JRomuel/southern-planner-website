@@ -13,10 +13,9 @@ export default function ParallaxImage({src, container, alt, label}) {
   const speed = useTransform(scrollYProgress, [0, 1], [0, 320]);
 
   return (
-    <div className={styles.parallax_image}>
-        <div className={styles.label}>
-          <span>{label}</span>
-        </div>
+    <div className={`${styles.parallax_image} ${label ? styles.with_label : ''}` }>
+        { label ? <div className={styles.label}><span>{label}</span></div> : ''}
+     
         <figure className={styles.figure}>
           <motion.div 
             style={{scale: 1.4, y: speed}} 
