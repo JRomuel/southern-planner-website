@@ -1,12 +1,28 @@
 .parallax_image{
     position: relative;
-    max-width: 550px;
-    height: auto;
-    width: 100%;
-    flex-shrink: 0;
+ 
 
     &.with_label{
-        padding: 30px;
+        &.left_label{
+            padding-left: 30px;
+        }
+        &.right_label{
+            padding-right: 30px;
+            .label{
+                position: absolute;
+                z-index: 1;
+                top: auto;
+                bottom: 40%;
+                right: -4px;
+                left: auto;
+            }
+        }
+    }
+
+    &.square_type{
+        .figure{
+            padding-top: 100%;
+        }
     }
 
     .label{
