@@ -1,0 +1,21 @@
+.section{
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    padding: 0;
+
+    .content_wrapper{
+        padding: 100px 0;
+        width: 500px;
+        .brand{
+            text-align: center;
+            .title{
+                font-family: var(--breathings-font);
+                font-size: 40px;
+            }
+        }
+    }
+    .bottom_spacer{
+        height: 85px;
+        width: 100%;
+        border-top: 1px solid rgba(var(--primary-color-rgb), 0.2);
+    }
+}

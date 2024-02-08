@@ -6,6 +6,8 @@ import About from "@/components/About";
 import Weddings from "@/components/Weddings";
 import HappyClients from "@/components/HappyClients";
 import Services from "@/components/Services";
+import LetsTalk from "@/components/LetsTalk";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -16,6 +18,8 @@ export default function Home() {
       <Weddings/>
       <HappyClients/>
       <Services/>
+      <LetsTalk/>
+      <Footer/>
     </main>
   )
 }

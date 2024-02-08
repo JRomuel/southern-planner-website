@@ -34,9 +34,6 @@ export default function Services() {
                 </div>
             </div>
         </section>
-        <div style={{height: '100vh'}}>
-        
-        </div>
     </div>
   )
 }
