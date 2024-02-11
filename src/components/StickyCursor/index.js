@@ -13,7 +13,7 @@ export default function StickyCursor() {
   }
 
   //Smooth out the mouse values
-  const smoothOptions = {damping: 20, stiffness: 120, mass: 0.8}
+  const smoothOptions = {damping: 20, stiffness: 200, mass: 0.5}
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOptions),
     y: useSpring(mouse.y, smoothOptions)
@@ -33,6 +33,7 @@ export default function StickyCursor() {
     }
   })
   return (
+    <div className={styles.cursorContainer}>
       <motion.div 
         style={{
           left: smoothMouse.x, 
@@ -40,5 +41,7 @@ export default function StickyCursor() {
         }}
         className={styles.cursor}>
       </motion.div>
+    </div>
+
   )
 }
