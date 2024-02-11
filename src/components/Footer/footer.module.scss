@@ -4,12 +4,30 @@
 
     .content_wrapper{
         padding: 100px 0;
-        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        gap: 250px;
         .brand{
             text-align: center;
+            flex-shrink: 0;
             .title{
                 font-family: var(--breathings-font);
-                font-size: 40px;
+                font-size: 30px;
+            }
+        }
+
+        .contact_wrapper{
+            padding-top: 20px;
+            display: flex;
+            gap: 100px;
+
+            .contact_details{
+                flex-shrink: 0;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                gap: 10px;
             }
         }
     }
