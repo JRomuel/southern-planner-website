@@ -30,7 +30,7 @@ export default function Nav() {
       className={styles.wrapper}>
 
       <div className={styles.icon}>
-        <Image className={styles.icon_image} src={icon}/>
+        <Image className={styles.icon_image} src={icon} alt="icon"/>
       </div>
       <motion.div 
          variants={{ 
@@ -43,7 +43,7 @@ export default function Nav() {
 
         className={styles.menu_wrapper}>
         <div className={styles.logo}>
-          <Image src={logo} style={{width:'auto', height:"100%"}}/>
+          <Image src={logo} style={{width:'auto', height:"100%"}} alt="logo"/>
         </div>
         <div className={styles.menu}>
           <ul>
